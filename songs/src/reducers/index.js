@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 
+//just a javascript function.
 const songsReducer = () => {
   return [
     { title: "Shawn Mendes: If I Cant Have You", duration: "4:21" },
@@ -9,6 +10,7 @@ const songsReducer = () => {
   ];
 };
 
+//just a javascript function.
 const selectedSongReducer = (selectedSong = null, action) => {
   if (action.type === "SONG_SELECTED") {
     return action.payload;
@@ -16,6 +18,7 @@ const selectedSongReducer = (selectedSong = null, action) => {
   return selectedSong;
 };
 
+//combining the javascript functions into the Reducer (redux construct)
 export default combineReducers({
   songs: songsReducer,
   selectedSong: selectedSongReducer
