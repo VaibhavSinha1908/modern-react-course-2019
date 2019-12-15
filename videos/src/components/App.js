@@ -44,12 +44,14 @@ class App extends React.Component {
                 onVideoSelect={this.onVideoSelect}
                 videos={this.state.videos}
               ></VideoList>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div> </div>
+
+
+        </div>     </div>
     );
   }
 }
+
+
 
 export default App;
