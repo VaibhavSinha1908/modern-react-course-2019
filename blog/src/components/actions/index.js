@@ -5,5 +5,5 @@ import jsonPlaceholder from "../../apis/jsonPlaceholder";
 //return two return statements.
 export const fetchPosts = () => async dispatch => {
   const response = await jsonPlaceholder.get("/posts");
-  dispatch({ type: "FETCH_POSTS", payload: response });
+  dispatch({ type: "FETCH_POSTS", payload: response.data }); //Manually call the action to send the object to other middlewares and/or in this case to a reducer.
 };
